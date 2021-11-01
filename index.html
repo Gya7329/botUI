@@ -22,7 +22,6 @@
         height: 2rem;
         cursor: pointer;
         transition: all ease 0.3s;
-
       }
       .chat-container {
         display: none;
@@ -39,7 +38,6 @@
         border-radius: 18px;
         border: none;
 
-
         /* margin: -20px; */
       }
       @media (max-width: 768px) {
@@ -48,22 +46,14 @@
           width: 340px;
           height: 600px;
         }
-
-
-
       }
     </style>
   </head>
   <body>
     <div class="chat-container">
-      <iframe
-        class="iframe"
-        src="botui.netlify.app"
-      >
-      </iframe>
+      <iframe class="iframe" src="https://botui.netlify.app"> </iframe>
     </div>
-    <a onclick="openChat()">
-    <img src="assets/chatbox-icon.svg"/></a>
+    <a onclick="openChat()"> <img src="assets/chatbox-icon.svg" /></a>
     <h1 style="margin: 10px">First Chat Ui Pop-UP</h1>
     <script>
       function openChat() {
