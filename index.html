@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        /* background-color:lightblue; */
+      }
+      a,
+      .chat-container {
+        position: fixed;
+        bottom: 2%;
+        right: 5%;
+        height: 2rem;
+        cursor: pointer;
+        transition: all ease 0.3s;
+
+      }
+      .chat-container {
+        display: none;
+        bottom: 95%;
+      }
+      .hide {
+        display: block;
+      }
+      .iframe {
+        height: 600px;
+        width: 420px;
+        background: #ffffff;
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+        border-radius: 18px;
+        border: none;
+
+
+        /* margin: -20px; */
+      }
+      @media (max-width: 768px) {
+        .iframe {
+          /* margin: 0; */
+          width: 340px;
+          height: 600px;
+        }
+
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <iframe
+        class="iframe"
+        src="http://127.0.0.1:5500/example/chatui/index.html"
+      >
+      </iframe>
+    </div>
+    <a onclick="openChat()">
+    <img src="assets/chatbox-icon.svg"/></a>
+    <h1 style="margin: 10px">First Chat Ui Pop-UP</h1>
+    <script>
+      function openChat() {
+        const chatContainer = document.querySelector(".chat-container");
+        chatContainer.classList.toggle("hide");
+      }
+    </script>
+  </body>
+</html>
